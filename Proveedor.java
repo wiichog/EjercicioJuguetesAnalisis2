@@ -1,5 +1,5 @@
 /**
-Autor: Alejandro Cortes
+Autores: Alejandro Cortes
 	   Freddie Batlle
 */
 
