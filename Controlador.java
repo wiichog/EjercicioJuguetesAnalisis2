@@ -31,12 +31,12 @@ public class Controlador{
 	public Proveedor[] tenPcs(){
 		
 		Proveedor[] tempProveedores = new Proveedor[proveedores.length];  //cant be higher
-		
+		int tempCounter = 0;
 		for (int i=0;i<proveedores.length;i++){  //this can let some elements in array returned as null
-			if (proveedores[i].getCantidadJuguetes() >= 10)
-				tempProveedores[i]=proveedores[i];
-			else
-				tempProveedores[i]=null;
+			if (proveedores[i].getCantidadJuguetes() >= 10){
+				tempProveedores[tempCounter]=proveedores[i];
+				tempCounter++;
+			}
 		}
 		
 		return tempProveedores;
@@ -61,14 +61,14 @@ public class Controlador{
 	public Proveedor[] providersFor(Juguete toy){
 		
 		Proveedor[] tempProveedores = new Proveedor[proveedores.length];  //cant be higher
+		int tempCounter =0;
 		
 		for (int i=0;i<proveedores.length;i++){  //this can let some elements in array returned as null
 			//arrays ,of both types of toys, converted to lists to use contains
-			if(Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy)||Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy))
-				tempProveedores[i] = proveedores[i];
-				
-			else 
-				tempProveedores[i] = null;
+			if(Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy)||Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy)){
+				tempProveedores[tempCounter] = proveedores[i];
+				tempCounter++;
+			}
 		}
 		
 		return tempProveedores;
