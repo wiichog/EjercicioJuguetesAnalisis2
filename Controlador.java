@@ -1,5 +1,7 @@
+import java.util.Arrays;
+
 /**
-Autor: Alejandro Cortes
+Autores: Alejandro Cortes
 	   Freddie Batlle
 */
 
@@ -25,4 +27,50 @@ public class Controlador{
 
 	//   Other methods...
 	
+	//Returns array of Providers who provide 10+ toys of any kind
+	public Proveedor[] tenPcs(){
+		
+		Proveedor[] tempProveedores = new Proveedor[proveedores.length];  //cant be higher
+		
+		for (int i=0;i<proveedores.length;i++){  //this can let some elements in array returned as null
+			if (proveedores[i].getCantidadJuguetes() >= 10)
+				tempProveedores[i]=proveedores[i];
+			else
+				tempProveedores[i]=null;
+		}
+		
+		return tempProveedores;
+	}
+	
+	//Returns most expensiveToy (not just of a provider)
+	public String expensiveToy(){
+		return null;
+	}
+	
+	//Returns a list of toys given a complexity
+	public Juguete[] mechComplex(int complexity){
+		return null;
+	}
+	
+	//Returns a list of toys sorted by price
+	public Juguete[] electricSorted(){
+		return null;
+	}
+	
+	//Returns a list of providers with toy
+	public Proveedor[] providersFor(Juguete toy){
+		
+		Proveedor[] tempProveedores = new Proveedor[proveedores.length];  //cant be higher
+		
+		for (int i=0;i<proveedores.length;i++){  //this can let some elements in array returned as null
+			//arrays ,of both types of toys, converted to lists to use contains
+			if(Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy)||Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy))
+				tempProveedores[i] = proveedores[i];
+				
+			else 
+				tempProveedores[i] = null;
+		}
+		
+		return tempProveedores;
+	}
 }
