@@ -18,6 +18,8 @@ public class Main
 		//Arreglos de objetos
 		Juguete [] juguetes = new Juguete [100];
 		Proveedor [] proveedores = new Proveedor [100];
+		//Contador de Juguetes y Proveedores
+		int posJuguetes = 0, posProv = 0;
 		
 		while(salida!=10)
 		{
@@ -38,7 +40,7 @@ public class Main
 			{
 				case 1:  
 					System.out.println("Ingreso de Nuevo Juguete");
-
+					
 					System.out.println("Ingrese el codigo");
 					String codigo = entrada.nextLine();
 					System.out.println("Ingrese la marca");
@@ -51,14 +53,22 @@ public class Main
 					int proveedor = entrada.nextInt();
 					System.out.println("Ingrese el valor unitario");
 					int valorUnitario = entrada.nextInt();
+					System.out.println("Ingrese el valor adicional");
+					int valorAdicional = entrada.nextInt();
 					System.out.println("Ingrese la complejidad");
 					int complejidad = entrada.nextInt();
+					
+					//Se crea el nuevo juguete
+					juguetes[posJuguetes] = new Juguete(codigo,marca,tipoDeJuguete,edad,proveedor,valorUnitario,valorAdicional,complejidad);
+					
 				break;
 				
 				case 2:
+					System.out.println("Modificar Juguete Existente");
 				break;
 				
 				case 3:  
+					System.out.println("Eliminar Juguete Existente");
 				break;
 				
 				case 4: 
@@ -66,17 +76,25 @@ public class Main
 					
 					System.out.println("Ingrese el nombre");
 					String nombreProveedor = entrada.nextLine();
+					
+					//Se crea el proveedor
+					proveedores[posProv] = new Proveedor(nombreProveedor);
+					
 				break;
+				
 				case 5:  
-						 break;
+					System.out.println("Modificar Proveedor Existente");
+				break;
+				
 				case 6:  
-						 break;
+					System.out.println("Eliminar Proveedor Existente");
+				break;
+				
 				default:
-						 break;
+					System.out.println("Error. Ingrese opcion correcta.");
+				break;
 			}
 		}	
 		
-		
-		
 	}
-	}
+}
