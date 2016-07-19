@@ -10,6 +10,18 @@ public class Juguete {
 	private boolean estado;
 
 	// public stuff
+	public void CalculateFinalPrice(){
+	if (this.tipoJuguete =="Mecanico"){
+		int PrecioFinal = 0;
+		PrecioFinal = this.valorU + (this.valorAdicional * this.complejidad)
+		juguete.SetPrecioFinal(PrecioFinal);
+		}
+		else{
+		int PrecioFinal = 0;
+		PrecioFinal = this.valorU + (2*this.valorAdicional)
+		juguete.SetPrecioFinal(PrecioFinal);
+	}}
+	
 	//   Setters...
 	public void setEstado(Boolean estado){
 		this.estado = estado;
