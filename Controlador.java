@@ -1,5 +1,6 @@
 /**
 Autor: Alejandro Cortes
+	   Freddie Batlle
 */
 
 public class Controlador{
@@ -14,7 +15,7 @@ public class Controlador{
 	}
 
 	//   Setters...
-	public void setProveedores(Proveedore proveedores[]){
+	public void setProveedores(Proveedor proveedores[]){
 		this.proveedores = proveedores;
 	}
 	//   Getters...

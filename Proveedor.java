@@ -1,5 +1,6 @@
 /**
 Autor: Alejandro Cortes
+	   Freddie Batlle
 */
 
 public class Proveedor{
@@ -9,7 +10,7 @@ public class Proveedor{
 	// Public stuff...
 
 	// contructors
-	public Proveedor(String nombre, Juguetes listaMecanicos[], Juguetes listaElectronicos){
+	public Proveedor(String nombre, Juguete listaMecanicos[], Juguete listaElectronicos[]){
 		this.nombre = nombre;
 		this.listaMecanicos = listaMecanicos;
 		this.listaElectronicos = listaElectronicos;
@@ -19,10 +20,10 @@ public class Proveedor{
 	public void setNombre(String nombre){
 		this.nombre = nombre;
 	}
-	public void setListaMecanicos(Juguetes listaMecanicos[]){
+	public void setListaMecanicos(Juguete listaMecanicos[]){
 		this.listaMecanicos = listaMecanicos;
 	}
-	public void setListaElectronicos(Juguetes listaElectronicos[]){
+	public void setListaElectronicos(Juguete listaElectronicos[]){
 		this.listaElectronicos = listaElectronicos;
 	}
 
@@ -39,19 +40,23 @@ public class Proveedor{
 
 	//   Other methods...
 	public int getSizeLista(String lista){
-		
+		return lista.length();
 	}
-	public int gatCantidadJuguetes(){
-
+	public int getCantidadJuguetes(){
+		return listaMecanicos.length + listaElectronicos.length;
 	}
-	@Overload
+	
 	public int getCantidadJuguetes(String tipo){
-
+		if (tipo.equals("Mecanicos"))
+			return listaMecanicos.length;
+		else
+			return listaElectronicos.length;
 	}
-	public Juguete getJugueteMasCaro(){
-
-	}
-	public Juguete[] getListaSorted(String tipo){
+	
+	//public Juguete getJugueteMasCaro(){
 		
-	}
+	//}
+	//public Juguete[] getListaSorted(String tipo){
+		
+	//}
 }
