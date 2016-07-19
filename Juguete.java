@@ -7,9 +7,14 @@ public class Juguete {
 	private String codigo, valorU, marca, tipoJuguete;
 	private int edad, proveedor, valorAdicional, complejidad;
 	private float precioVenta;
+	private boolean estado;
 
 	// public stuff
 	//   Setters...
+	public void setEstado(Boolean estado){
+		this.estado = estado;
+	}
+	
 	public void setCodigo(String codigo){
 		this.codigo = codigo;
 	}
@@ -39,6 +44,10 @@ public class Juguete {
 	}
 
 	//  Getters...
+	public boolean getEstado(){
+		return estado;
+	}
+	
 	public String getCodigo(){
 		return codigo;
 	}
