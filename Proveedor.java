@@ -6,6 +6,7 @@ Autores: Alejandro Cortes
 public class Proveedor{
 	// Private stuff...
 	private String nombre;
+	private boolean estado;
 	private Juguete listaMecanicos[], listaElectronicos[];	
 	// Public stuff...
 
@@ -17,6 +18,10 @@ public class Proveedor{
 	}
 
 	//   Setters...
+	public void setNombre(boolean estado){
+		this.estado = estado;
+	}
+	
 	public void setNombre(String nombre){
 		this.nombre = nombre;
 	}
@@ -30,6 +35,9 @@ public class Proveedor{
 	//   Getters...
 	public String getNombre(){
 		return nombre;
+	}
+	public boolean getEstado(){
+		return estado;
 	}
 	public Juguete[] getListaMecanicos(){
 		return listaMecanicos;
