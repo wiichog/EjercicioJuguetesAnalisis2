@@ -80,7 +80,7 @@ public class Controlador{
 		for (int i=0; i<proveedores.length; i++){  //this can let some elements in array returned as null
 			//arrays ,of both types of toys, converted to lists to use contains
 			if(providerName.equals(proveedores[i].getName())){
-				totalToys = proveedores.getListaElectronicos().length() + proveedores.getListaMecanicos().length();
+				totalToys = proveedores.getListaElectronicos().length + proveedores.getListaMecanicos().length;
 			}
 		}
 		return totalToys;
