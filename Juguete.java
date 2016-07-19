@@ -4,8 +4,8 @@ Autor: Alejandro Cortes
 
 public class Juguete {
 	// Private stuff
-	private String codigo, valorU, marca, tipoJuguete;
-	private int edad, proveedor, valorAdicional, complejidad;
+	private String codigo, marca, tipoJuguete;
+	private int edad, proveedor, valorAdicional, complejidad,valorU;
 	private float precioVenta;
 	private boolean estado;
 
@@ -18,7 +18,7 @@ public class Juguete {
 	public void setCodigo(String codigo){
 		this.codigo = codigo;
 	}
-	public void setValorUnitario(String valorU){
+	public void setValorUnitario(int valorU){
 		this.valorU = valorU;
 	}
 	public void setMarca(String marca){
@@ -51,7 +51,7 @@ public class Juguete {
 	public String getCodigo(){
 		return codigo;
 	}
-	public String getValorUnitario(){
+	public int getValorUnitario(){
 		return valorU;
 	}
 	public String getMarca(){
