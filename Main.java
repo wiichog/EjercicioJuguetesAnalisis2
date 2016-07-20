@@ -19,7 +19,7 @@ public class Main
 		Juguete [] juguetes = new Juguete [100];
 		Proveedor [] proveedores = new Proveedor [100];
 		//Contador de Juguetes y Proveedores
-		int posJuguetes = 0, posProv = 0;
+		int posJuguetes = 0, posProv = 0, mod = 0;
 		
 		while(salida!=10)
 		{
@@ -65,6 +65,29 @@ public class Main
 				
 				case 2:
 					System.out.println("Modificar Juguete Existente");
+					System.out.println("Id del Juguete a modificar");
+					mod = entrada.nextInt();
+					
+					System.out.println("Ingrese el codigo");
+					String codigo = entrada.nextLine();
+					System.out.println("Ingrese la marca");
+					String marca = entrada.nextLine();
+					System.out.println("Ingrese tipo de juguete");
+					String tipoDeJuguete = entrada.nextLine();
+					System.out.println("Ingrese edad");
+					int edad = entrada.nextInt();
+					System.out.println("Ingrese el proveedor del juguete");
+					int proveedor = entrada.nextInt();
+					System.out.println("Ingrese el valor unitario");
+					int valorUnitario = entrada.nextInt();
+					System.out.println("Ingrese el valor adicional");
+					int valorAdicional = entrada.nextInt();
+					System.out.println("Ingrese la complejidad");
+					int complejidad = entrada.nextInt();
+					
+					//Se modifica el juguete
+					juguetes[mod] = new Juguete(codigo,marca,tipoDeJuguete,edad,proveedor,valorUnitario,valorAdicional,complejidad);
+					
 				break;
 				
 				case 3:  
