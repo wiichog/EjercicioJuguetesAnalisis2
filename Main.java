@@ -113,6 +113,18 @@ public class Main
 					System.out.println("Eliminar Proveedor Existente");
 				break;
 				
+				case 7:  
+					System.out.println("Eliminar Proveedor Existente");
+				break;
+				
+				case 8:  
+					System.out.println("Eliminar Proveedor Existente");
+				break;
+				
+				case 9:  
+					System.out.println("Eliminar Proveedor Existente");
+				break;
+				
 				default:
 					System.out.println("Error. Ingrese opcion correcta.");
 				break;
