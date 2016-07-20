@@ -8,18 +8,21 @@ Edit: tiagosansopa
 public class Main
 {
 	// Private stuff...
-	private Controlador controlador;
+	
 
 	// Public stuff...
 
 	// Main  
 	public static void main(String[] args)
 	{
+				Controlador controlador;
+		
 		int salida = 0, opcion= 0;
 		Scanner entrada = new Scanner(System.in);
 		//Arreglos de objetos
-		Juguete [] juguetes = new Juguete [30];
-		Proveedor [] proveedores = new Proveedor [30];
+		Juguete[] juguetes = new Juguete [30];
+		Proveedor[] proveedores = new Proveedor [30];
+		controlador = new Controlador(proveedores);
 		//Contador de Juguetes y Proveedores
 		int posJuguetes = 0, posProv = 0, mod = 0;
 		
@@ -32,8 +35,8 @@ public class Main
 			System.out.println("4.  Ingresar Proveedor");
 			System.out.println("5.  Modificar Proveedor");
 			System.out.println("6.  Eliminar Proveedor");
-			System.out.println("7.  Listar todos los proveedores que proveen más de 10 juguetes.");
-			System.out.println("8. Dado el nombre de un proveedor conocer cuántos juguetes mecánicos o electrónicos suministra.");
+			System.out.println("7.  Listar todos los proveedores que proveen mÃ¡s de 10 juguetes.");
+			System.out.println("8. Dado el nombre de un proveedor conocer cuÃ¡ntos juguetes mecÃ¡nicos o electrÃ³nicos suministra.");
 			System.out.println("9. Dado un tipo de juguete, listar todos los proveedores que suministran ese tipo de juguete.");
 			System.out.println("10. Salir");
 			opcion = entrada.nextInt();
@@ -65,7 +68,7 @@ public class Main
 					//Se crea el nuevo juguete
 					
 					juguetes[posJuguetes] = new Juguete(codigo,marca,tipoDeJuguete,edad,proveedor,valorUnitario,valorAdicional,complejidad);
-					
+					controlador.addToy(proveedores, nombreProveedor, juguetes[posJuguetes], tipoDeJuguete);					
 				break;
 				
 				case 2:
@@ -92,6 +95,7 @@ public class Main
 					
 					//Se modifica el juguete
 					juguetes[mod] = new Juguete(codigo,marca,tipoDeJuguete,edad,proveedor,valorUnitario,valorAdicional,complejidad);
+					controlador.addToy(proveedores, nombreProveedor, juguetes[posJuguetes], tipoDeJuguete);
 					
 				break;
 				
@@ -119,15 +123,15 @@ public class Main
 				break;
 				
 				case 7:  
-					System.out.println("Eliminar Proveedor Existente");
+					System.out.println("Listar todos los proveedores que proveen mas de 10 juguetes."");
 				break;
 				
 				case 8:  
-					System.out.println("Eliminar Proveedor Existente");
+					System.out.println("Dado el nombre de un proveedor conocer cuÃ¡ntos juguetes mecÃ¡nicos o electrÃ³nicos suministra.");
 				break;
 				
 				case 9:  
-					System.out.println("Eliminar Proveedor Existente");
+					System.out.println("Dado un tipo de juguete, listar todos los proveedores que suministran ese tipo de juguete.");
 				break;
 				
 				default:

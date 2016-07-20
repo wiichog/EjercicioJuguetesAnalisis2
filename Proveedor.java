@@ -7,7 +7,7 @@ public class Proveedor{
 	// Private stuff...
 	private String nombre;
 	private boolean estado;
-	private Juguete listaMecanicos[], listaElectronicos[];	
+	private Juguete listaMecanicos[], listaElectronicos[];
 	// Public stuff...
 
 	// contructors
@@ -15,6 +15,17 @@ public class Proveedor{
 		this.nombre = nombre;
 		this.listaMecanicos = listaMecanicos;
 		this.listaElectronicos = listaElectronicos;
+	}
+	public Proveedor(String nombre, Juguete toy, String tipoJuguete) {
+		this.nombre = nombre;
+		this.listaMecanicos = new Juguete[50];
+		this.listaElectronicos = new Juguete[50];
+		
+		if (tipoJuguete.equals("Mecanico")) {
+			this.listaMecanicos[0] = toy;
+		} else {
+			this.listaMecanicos[0] = toy;
+		}
 	}
 
 	//   Setters...
@@ -61,10 +72,19 @@ public class Proveedor{
 			return listaElectronicos.length;
 	}
 	
-	//public Juguete getJugueteMasCaro(){
-		
-	//}
-	//public Juguete[] getListaSorted(String tipo){
-		
-	//}
+	public void addMecanico(Juguete toy){
+		int i = 0;
+		while (this.listaMecanicos[i] != null) {
+			i++;
+		}
+		this.listaMecanicos[i] = toy;
+	}
+	
+	public void addElectronico(Juguete toy){
+		int i = 0;
+		while (this.listaElectronicos[i] != null) {
+			i++;
+		}
+		this.listaElectronicos[i] = toy;
+	}
 }

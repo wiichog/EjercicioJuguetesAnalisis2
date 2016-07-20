@@ -89,6 +89,10 @@ public class Controlador{
 	
 	public Proveedor[] addToy(Proveedor[] providers,String providerName,Juguete toy,String type){
 		int pos = searchAddProvider(providers,providerName,toy,type);
+		if (type.equals("Mecanico"))
+			providers[pos].addMecanico(toy);
+		else if(type.equals("Electronico"))
+			providers[pos].addElectronico(toy);
 	}
 	
 	public int searchAddProvider(Proveedor[] providers,String providerName,Juguete toy,String type){
