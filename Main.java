@@ -124,6 +124,7 @@ public class Main
 				
 				case 7:  
 					System.out.println("Listar todos los proveedores que proveen mas de 10 juguetes."");
+					System.out.println("Listar todos los proveedores que proveen mas de 10 juguetes.");
 					controlador.tenPcs();
 				break;
 				
@@ -131,12 +132,15 @@ public class Main
 					System.out.println("Dado el nombre de un proveedor conocer cuÃ¡ntos juguetes mecÃ¡nicos y electrÃ³nicos suministra.");
 					System.out.println("Ingrese el nombre");
 					String nombreProveedor = entrada.nextLine();
+					System.out.println("Dado el nombre de un proveedor conocer cuántos juguetes mecánicos y electrónicos suministra.");
+					System.out.println("Ingrese el nombre");
+					nombreProveedor = entrada.nextLine();
 					controlador.totalToys(nombreProveedor);
 				break;
 				
 				case 9:  
 					System.out.println("Dado un tipo de juguete, listar todos los proveedores que suministran ese tipo de juguete.");
-					controlador.
+					//controlador.
 				break;
 				
 				default:
