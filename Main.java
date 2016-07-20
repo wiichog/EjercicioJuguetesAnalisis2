@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
 Autor: Alejandro Cortes
 Edit: tiagosansopa
@@ -16,8 +18,8 @@ public class Main
 		int salida = 0, opcion= 0;
 		Scanner entrada = new Scanner(System.in);
 		//Arreglos de objetos
-		Juguete [] juguetes = new Juguete [100];
-		Proveedor [] proveedores = new Proveedor [100];
+		Juguete [] juguetes = new Juguete [30];
+		Proveedor [] proveedores = new Proveedor [30];
 		//Contador de Juguetes y Proveedores
 		int posJuguetes = 0, posProv = 0, mod = 0;
 		
@@ -49,6 +51,8 @@ public class Main
 					String tipoDeJuguete = entrada.nextLine();
 					System.out.println("Ingrese edad");
 					int edad = entrada.nextInt();
+					System.out.println("Ingese el nombre del proveedor");
+					String nombreProveedor = entrada.nextLine();
 					System.out.println("Ingrese el proveedor del juguete");
 					int proveedor = entrada.nextInt();
 					System.out.println("Ingrese el valor unitario");
@@ -59,6 +63,7 @@ public class Main
 					int complejidad = entrada.nextInt();
 					
 					//Se crea el nuevo juguete
+					
 					juguetes[posJuguetes] = new Juguete(codigo,marca,tipoDeJuguete,edad,proveedor,valorUnitario,valorAdicional,complejidad);
 					
 				break;
@@ -69,21 +74,21 @@ public class Main
 					mod = entrada.nextInt();
 					
 					System.out.println("Ingrese el codigo");
-					String codigo = entrada.nextLine();
+					codigo = entrada.nextLine();
 					System.out.println("Ingrese la marca");
-					String marca = entrada.nextLine();
+					marca = entrada.nextLine();
 					System.out.println("Ingrese tipo de juguete");
-					String tipoDeJuguete = entrada.nextLine();
+					tipoDeJuguete = entrada.nextLine();
 					System.out.println("Ingrese edad");
-					int edad = entrada.nextInt();
+					edad = entrada.nextInt();
 					System.out.println("Ingrese el proveedor del juguete");
-					int proveedor = entrada.nextInt();
+					proveedor = entrada.nextInt();
 					System.out.println("Ingrese el valor unitario");
-					int valorUnitario = entrada.nextInt();
+					valorUnitario = entrada.nextInt();
 					System.out.println("Ingrese el valor adicional");
-					int valorAdicional = entrada.nextInt();
+					valorAdicional = entrada.nextInt();
 					System.out.println("Ingrese la complejidad");
-					int complejidad = entrada.nextInt();
+					complejidad = entrada.nextInt();
 					
 					//Se modifica el juguete
 					juguetes[mod] = new Juguete(codigo,marca,tipoDeJuguete,edad,proveedor,valorUnitario,valorAdicional,complejidad);

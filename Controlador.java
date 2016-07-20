@@ -32,7 +32,7 @@ public class Controlador{
 		
 		Proveedor[] tempProveedores = new Proveedor[proveedores.length];  //cant be higher
 		int tempCounter = 0;
-		for (int i=0;i<proveedores.length;i++){  //this can let some elements in array returned as null
+		for (int i=0;i<proveedores.length;i++){  
 			if (proveedores[i].getCantidadJuguetes() >= 10){
 				tempProveedores[tempCounter]=proveedores[i];
 				tempCounter++;
@@ -63,7 +63,7 @@ public class Controlador{
 		Proveedor[] tempProveedores = new Proveedor[proveedores.length];  //cant be higher
 		int tempCounter =0;
 		
-		for (int i=0;i<proveedores.length;i++){  //this can let some elements in array returned as null
+		for (int i=0;i<proveedores.length;i++){  
 			//arrays ,of both types of toys, converted to lists to use contains
 			if(Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy)||Arrays.asList(proveedores[i].getListaElectronicos()).contains(toy)){
 				tempProveedores[tempCounter] = proveedores[i];
@@ -77,12 +77,30 @@ public class Controlador{
 	//Returns total of mechanic or electronic toys
 	public int totalToys(String providerName) {
 		int totalToys = 0;
-		for (int i=0; i<proveedores.length; i++){  //this can let some elements in array returned as null
-			//arrays ,of both types of toys, converted to lists to use contains
-			if(providerName.equals(proveedores[i].getName())){
-				totalToys = proveedores.getListaElectronicos().length + proveedores.getListaMecanicos().length;
+		for (int i=0; i<proveedores.length; i++){ 
+
+			if(providerName.equals(proveedores[i].getNombre())){
+				totalToys = proveedores[i].getListaElectronicos().length + proveedores[i].getListaMecanicos().length;
+				
 			}
 		}
 		return totalToys;
+	}
+	
+	public Proveedor[] addToy(Proveedor[] providers,String providerName,Juguete toy){
+		int pos = searchItem(providers,providerName);
+		
+	}
+	
+	public int search&AddProvider(Proveedor[] providers,String providerName,){
+		int firstNull =0;
+		for (int i=0; i<providers.length;i++){
+			if(providers[i].getNombre().equals(providerName))
+				return i;
+			else if(providers[i].getNombre()==null)
+				firstNull = i;
+		}
+		providers[firstNull]= new Proveedor(providerName,toy,)
+		return 51; //if it didnt find the item
 	}
 }
