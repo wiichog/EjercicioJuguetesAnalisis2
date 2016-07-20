@@ -87,12 +87,11 @@ public class Controlador{
 		return totalToys;
 	}
 	
-	public Proveedor[] addToy(Proveedor[] providers,String providerName,Juguete toy){
-		int pos = searchItem(providers,providerName);
-		
+	public Proveedor[] addToy(Proveedor[] providers,String providerName,Juguete toy,String type){
+		int pos = searchAddProvider(providers,providerName,toy,type);
 	}
 	
-	public int search&AddProvider(Proveedor[] providers,String providerName,){
+	public int searchAddProvider(Proveedor[] providers,String providerName,Juguete toy,String type){
 		int firstNull =0;
 		for (int i=0; i<providers.length;i++){
 			if(providers[i].getNombre().equals(providerName))
@@ -100,7 +99,7 @@ public class Controlador{
 			else if(providers[i].getNombre()==null)
 				firstNull = i;
 		}
-		providers[firstNull]= new Proveedor(providerName,toy,)
+		providers[firstNull]= new Proveedor(providerName,toy,type);
 		return 51; //if it didnt find the item
 	}
 }
